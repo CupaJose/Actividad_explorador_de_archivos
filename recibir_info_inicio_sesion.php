@@ -18,7 +18,7 @@
         $_SESSION["user"]=(isset($_POST["usuario"])&&$_POST!="")? $_POST["usuario"]: $_SESSION["user"];
         $_SESSION["casa"]=(isset($_POST["casa"])&&$_POST!="")? $_POST["casa"]: $_SESSION["casa"];
         echo
-        "<form action='http://localhost/php/recibir_info_accion.php' method='post' target='_self'>
+        "<form action='http://localhost/php/Actividad_explorador_de_archivos/recibir_info_accion.php' method='post' target='_self'>
             <u>Que quieres hacer?</u><br><br>
             <label for='Crear_a'>Crear archivo</label>
             <input type='radio' id='Crear_a' name='accion' value='Crear_a' checked><br>

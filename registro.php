@@ -80,12 +80,7 @@ if($bandera){
     if($_SESSION["accion"]=="Crear_a")
     {
         fwrite($registro, ' a creado el archivo con el nombre "'.$_SESSION["nombre_n"].'" a las '.date("G:i:s")." el dia ".date("d/n/Y")."\r\n");
-<<<<<<< HEAD
         fopen($_SESSION["nombre_n"], "x+");   
-=======
-
-        fopen($_SESSION["nombre_n"], "x+");
->>>>>>> e11e5507234272f55e970275c182914a4a42b15b
     }
     if($_SESSION["accion"]=="renombrar_a")
     {

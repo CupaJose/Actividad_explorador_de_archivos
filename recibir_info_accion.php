@@ -11,7 +11,7 @@
         session_start();
         $_SESSION["accion"]=(isset($_POST["accion"])&&$_POST!="")? $_POST["accion"]:"Error";
 
-        echo "<form action='http://localhost/php/registro.php' method='POST' target='_self'>";
+        echo "<form action='http://localhost/php/Actividad_explorador_de_archivos/registro.php' method='POST' target='_self'>";
         if($_SESSION["accion"]=="Crear_a")
         {
             echo 
