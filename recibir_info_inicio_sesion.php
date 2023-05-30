@@ -28,7 +28,7 @@
             <input type='radio' id='eliminar_c' name='accion' value='eliminar_c'><br><br>
             <button type='submit'>Enviar</button>
             <button type='reset'>Borrar</button>
-        </form>"
+        </form>";
     ?>
 </body>
 </html>
