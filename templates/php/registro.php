@@ -124,7 +124,7 @@ if($bandera){
     fclose($registro);
 }
     echo "<a href = './recibir_info_inicio_sesion.php'><button>Regresar a realizar otra accion</button></a><br><br>";
-    echo "<a href = './formulario_provisional.html'><button>Abandonar sesion</button></a>";
+    echo "<a href = '../formulario_provisional.html'><button>Abandonar sesion</button></a>";
     
 
 ?>
