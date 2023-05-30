@@ -10,6 +10,7 @@
     <?php
         session_start();
         $_SESSION["accion"]=(isset($_POST["accion"])&&$_POST!="")? $_POST["accion"]:"Error";
+
         echo "<form action='http://localhost/php/registro.php' method='POST' target='_self'>";
         if($_SESSION["accion"]=="Crear_a")
         {
@@ -18,50 +19,53 @@
                 <label>Nombre del nuevo archivo
                 <input type='text' name='nombre_n' required>
                 </label>";
+
         }
         if($_SESSION["accion"]=="Crear_c")
         {
-            echo 
-            "
+            echo "
                 <label>Nombre de la nueva carpeta
                 <input type='text' name='nombre_n' required>
                 </label>";
+
         }
         if($_SESSION["accion"]=="renombrar_a")
         {
             echo
+
             "
                 <label>Nombre del archivo a renombrar
                 <input type='text' name='nombre_v' required>
                 </label>
                 <label>Nuevo nombre
                 <input type='text' name='nombre_n' required>
+
                 </label>";
         }
         if($_SESSION["accion"]=="renombrar_c")
         {
-            echo
-            "
+            echo "
+
                 <label>Nombre de la carpeta a renombrar
                 <input type='text' name='nombre_v' required>
                 </label>
                 <label>Nuevo nombre
                 <input type='text' name='nombre_n' required>
                 </label>";
+
         }
         if($_SESSION["accion"]=="eliminar_a")
         {
-            echo
-            "
+            echo "
                 <label>Nombre del archivo a eliminar
                 <input type='text' name='nombre_v' required>
                 </label>
                 ";
+
         }
         if($_SESSION["accion"]=="eliminar_c")
         {
-            echo
-            "
+            echo "
                 <label>Nombre de la carpeta a eliminar
                 <input type='text' name='nombre_v' required>
                 </label>
