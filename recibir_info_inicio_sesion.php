@@ -12,7 +12,7 @@
         $_SESSION["user"]=(isset($_POST["usuario"])&&$_POST!="")? $_POST["usuario"]:"Error";
         $_SESSION["casa"]=(isset($_POST["casa"])&&$_POST!="")? $_POST["casa"]:"Error";
         echo
-        "<form action='http://localhost/Curso_Web_2023/Actividad_explorador_de_archivos/recibir_info_accion.php' method='post' target='_self'>
+        "<form action='http://localhost/php/recibir_info_accion.php' method='post' target='_self'>
             <u>Que quieres hacer?</u><br><br>
             <label for='Crear_a'>Crear archivo</label>
             <input type='radio' id='Crear_a' name='accion' value='Crear_a' checked><br>
