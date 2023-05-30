@@ -9,8 +9,14 @@
 <body>
     <?php
         session_start();
-        $_SESSION["user"]=(isset($_POST["usuario"])&&$_POST!="")? $_POST["usuario"]:"Error";
-        $_SESSION["casa"]=(isset($_POST["casa"])&&$_POST!="")? $_POST["casa"]:"Error";
+        if(!isset($_SESSION["user"])){
+            $_SESSION["user"] = " ";
+        }
+        if(!isset($_SESSION["casa"])){
+            $_SESSION["casa"] = " ";
+        }
+        $_SESSION["user"]=(isset($_POST["usuario"])&&$_POST!="")? $_POST["usuario"]: $_SESSION["user"];
+        $_SESSION["casa"]=(isset($_POST["casa"])&&$_POST!="")? $_POST["casa"]: $_SESSION["casa"];
         echo
         "<form action='http://localhost/php/recibir_info_accion.php' method='post' target='_self'>
             <u>Que quieres hacer?</u><br><br>
