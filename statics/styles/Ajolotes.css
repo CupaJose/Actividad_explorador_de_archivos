@@ -1,0 +1,23 @@
+body{
+    background-image: url("../media/Fondo_ajolote.jpg") ;
+    background-size: cover;
+}
+.text{
+    font-size: xx-large;
+    color: #FBFF7A;
+}
+.int_text{
+    width: 20rem;
+    height: 1.5rem;
+}
+/* .opcion{
+    height: 1.5rem;
+} */
+u{
+    font-size: xx-large;
+    color: #8FFFD2;
+}
+.mov_pag{
+    width: 15rem;
+    height: 2.5rem;
+}

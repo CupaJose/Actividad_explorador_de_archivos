@@ -1,7 +1,7 @@
 <?php
     session_start();
     $_SESSION["accion"]=(isset($_POST["accion"])&&$_POST!="")? $_POST["accion"]:"Error";
-    $ruta="'./".$_SESSION["casa"].".css'";
+    $ruta="'../../statics/styles/".$_SESSION["casa"].".css'";
     
 echo "<!DOCTYPE html>
 <html lang='en'>
@@ -13,21 +13,21 @@ echo "<!DOCTYPE html>
     <title>Document</title>
 </head>
 <body>";
-        echo "<form action='http://localhost/php/Actividad_explorador_de_archivos/registro.php' method='POST' target='_self'>";
+        echo "<form action='http://localhost/php/Actividad_explorador_de_archivos/templates/php/registro.php' method='POST' target='_self'>";
         if($_SESSION["accion"]=="Crear_a")
         {
             echo 
             "
-                <label>Nombre del nuevo archivo
-                <input type='text' name='nombre_n' required>
+                <label class='text'>Nombre del nuevo archivo
+                <input class='int_text' type='text' name='nombre_n' required>
                 </label>";
 
         }
         if($_SESSION["accion"]=="Crear_c")
         {
             echo "
-                <label>Nombre de la nueva carpeta
-                <input type='text' name='nombre_n' required>
+                <label class='text'>Nombre de la nueva carpeta
+                <input class='int_text' type='text' name='nombre_n' required>
                 </label>";
 
         }
@@ -36,11 +36,11 @@ echo "<!DOCTYPE html>
             echo
 
             "
-                <label>Nombre del archivo a renombrar
-                <input type='text' name='nombre_v' required>
+                <label class='text'>Nombre del archivo a renombrar
+                <input class='int_text' type='text' name='nombre_v' required>
                 </label>
-                <label>Nuevo nombre
-                <input type='text' name='nombre_n' required>
+                <label class='text'>Nuevo nombre
+                <input class='int_text' type='text' name='nombre_n' required>
 
                 </label>";
         }
@@ -48,19 +48,19 @@ echo "<!DOCTYPE html>
         {
             echo "
 
-                <label>Nombre de la carpeta a renombrar
-                <input type='text' name='nombre_v' required>
+                <label class='text'>Nombre de la carpeta a renombrar
+                <input class='int_text' type='text' name='nombre_v' required>
                 </label>
-                <label>Nuevo nombre
-                <input type='text' name='nombre_n' required>
+                <label class='text'>Nuevo nombre
+                <input class='int_text' type='text' name='nombre_n' required>
                 </label>";
 
         }
         if($_SESSION["accion"]=="eliminar_a")
         {
             echo "
-                <label>Nombre del archivo a eliminar
-                <input type='text' name='nombre_v' required>
+                <label class='text'>Nombre del archivo a eliminar
+                <input class='int_text' type='text' name='nombre_v' required>
                 </label>
                 ";
 
@@ -68,12 +68,12 @@ echo "<!DOCTYPE html>
         if($_SESSION["accion"]=="eliminar_c")
         {
             echo "
-                <label>Nombre de la carpeta a eliminar
-                <input type='text' name='nombre_v' required>
+                <label class='text'>Nombre de la carpeta a eliminar
+                <input class='int_text' type='text' name='nombre_v' required>
                 </label>
                 ";
         }
-        echo "<button type='submit'>Enviar</button>
+        echo "<br><br><button type='submit'>Enviar</button>
         <button type='reset'>Borrar</button>
     </form>";
 echo "</body>
