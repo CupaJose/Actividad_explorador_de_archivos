@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    session_start();
+    $_SESSION["accion"]=(isset($_POST["accion"])&&$_POST!="")? $_POST["accion"]:"Error";
+    $ruta="'./".$_SESSION["casa"].".css'";
+    
+echo "<!DOCTYPE html>
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href= $ruta>
     <title>Document</title>
 </head>
-<body>
-    <?php
-        session_start();
-        $_SESSION["accion"]=(isset($_POST["accion"])&&$_POST!="")? $_POST["accion"]:"Error";
-
+<body>";
         echo "<form action='http://localhost/php/Actividad_explorador_de_archivos/registro.php' method='POST' target='_self'>";
         if($_SESSION["accion"]=="Crear_a")
         {
@@ -74,6 +76,6 @@
         echo "<button type='submit'>Enviar</button>
         <button type='reset'>Borrar</button>
     </form>";
-    ?>
-</body>
-</html>
+echo "</body>
+</html>";
+?>
